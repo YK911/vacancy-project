@@ -1,0 +1,82 @@
+.recommendations {
+  padding-top: 3.5rem;
+  padding-bottom: 7rem;
+
+  @include breakpoint($tablet-bp) {
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+  }
+
+  @include breakpoint($desktop-bp) {
+    padding-top: 7.5rem;
+    padding-bottom: 13rem;
+  }
+
+  .container {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    background-color: $white-smoke;
+
+    @include breakpoint($tablet-bp) {
+      padding: 8rem 4rem;
+    }
+
+    @include breakpoint($desktop-bp) {
+      padding: 10rem 7rem;
+    }
+  }
+
+  &__title {
+    @extend %section-title;
+    margin-bottom: 1.6rem;
+
+    @include breakpoint($desktop-bp) {
+      font-size: 4.8rem;
+      line-height: 5.8rem;
+    }
+  }
+
+  &__text {
+    @extend %section-text;
+    color: $gray;
+    margin-bottom: 4rem;
+
+    @include breakpoint($tablet-bp) {
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint($desktop-bp) {
+      font-size: 1.8rem;
+      line-height: 2.8rem;
+      margin-bottom: 4rem;
+    }
+
+    &-indent {
+      display: block;
+      margin-top: 1.6rem;
+
+      @include breakpoint($tablet-bp) {
+        display: inline;
+        margin-top: 0;
+      }
+
+      @include breakpoint($desktop-bp) {
+        display: block;
+      }
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    width: 23.2rem;
+    line-height: 2.2rem;
+    padding: 1.6rem 2.9rem;
+
+    @include breakpoint($tablet-bp) {
+      width: 31.3rem;
+      padding: 1.6rem 3.8rem;
+    }
+  }
+}

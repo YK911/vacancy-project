@@ -1,0 +1,12 @@
+.container {
+  max-width: 280px;
+  margin: 0 auto;
+
+  @include breakpoint($tablet-bp) {
+    max-width: 668px;
+  }
+
+  @include breakpoint($desktop-bp) {
+    max-width: 1170px;
+  }
+}

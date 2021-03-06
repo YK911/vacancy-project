@@ -1,0 +1,143 @@
+.contacts {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: $dark-navy;
+
+  @include breakpoint($tablet-bp) {
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      width: 56rem;
+    }
+  }
+
+  @include breakpoint($desktop-bp) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 4rem;
+
+    @include breakpoint($tablet-bp) {
+      margin: 0;
+    }
+  }
+
+  &__mail {
+    &-title {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      letter-spacing: 0.06em;
+      color: $light-gray;
+
+      margin-bottom: 1.6rem;
+
+      @include breakpoint($desktop-bp) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &-link {
+      display: block;
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 0.06em;
+      color: $light-gray;
+
+      margin-bottom: 4rem;
+      transition: color .2s linear;
+
+      @include breakpoint($tablet-bp) {
+        margin-bottom: 0;
+      }
+
+
+
+      @include breakpoint($desktop-bp) {
+        &:hover,
+        &:focus {
+          color: darken($light-gray, 10%);
+        }
+      }
+    }
+  }
+
+  &-social__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    @include breakpoint($tablet-bp) {
+      flex-direction: column;
+    }
+
+    @include breakpoint($desktop-bp) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 56.6rem;
+    }
+
+    &-item {
+      font-family: $main-font;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      letter-spacing: 0.06em;
+      list-style: none;
+
+      &:nth-child(-n + 3) {
+        margin-right: 3.2rem;
+      }
+
+      &:nth-child(-n + 2) {
+        margin-bottom: 2.4rem;
+      }
+
+      @include breakpoint($tablet-bp) {
+        &:nth-child(-n + 3) {
+          margin-right: 0;
+          margin-bottom: 1.8rem;
+        }
+      }
+
+      @include breakpoint($desktop-bp) {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+
+        &:nth-child(n) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $white;
+      transition: color .2s linear;
+
+      @include breakpoint($desktop-bp) {
+        &:hover,
+        &:focus {
+          color: $orange;
+        }
+      }
+    }
+  }
+}

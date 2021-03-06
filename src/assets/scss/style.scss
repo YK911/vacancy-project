@@ -1,0 +1,43 @@
+@import "vars";
+@import "mixins";
+@import "vendors/normalize";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $white;
+
+  font-family: $main-font;
+  font-size: 2.1rem;
+  color: $white;
+}
+
+.orange {
+  color: $orange;
+}
+.orange-bgd {
+  background-color: $orange;
+}
+
+/* Blocks */
+@import "blocks/page";
+@import "blocks/container";
+@import "blocks/btn";
+@import "blocks/header";
+@import "blocks/company";
+@import "blocks/about-you";
+@import "blocks/achievements";
+@import "blocks/implementations";
+@import "blocks/principles";
+@import "blocks/conditions";
+@import "blocks/recommendations";
+@import "blocks/contacts";
+@import "blocks/footer";

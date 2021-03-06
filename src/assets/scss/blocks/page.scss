@@ -1,0 +1,40 @@
+.page {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  @include breakpoint($tablet-bp) {
+    &::before {
+      display: block;
+      position: absolute;
+      content: "hire you";
+      top: 47.2rem;
+      left: 5rem;
+      width: 77.6rem;
+      z-index: 2;
+
+      font-family: $main-font;
+      font-weight: 800;
+      font-size: 130px;
+      line-height: 120px;
+      text-transform: uppercase;
+      color: #17ecff;
+
+      opacity: 0.06;
+    }
+  }
+
+  @include breakpoint($desktop-bp) {
+    &::before {
+      content: "we hire you";
+      top: 40.2rem;
+      left: 21.5rem;
+      width: 145.5rem;
+
+      font-size: 180px;
+      line-height: 216px;
+
+      opacity: 0.1;
+    }
+  }
+}
