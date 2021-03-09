@@ -21,20 +21,7 @@
       background: linear-gradient(36.8deg, #d1cfcf 0%, #f6f5f5 100%);
     }
 
-    &::after {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      display: block;
-      width: 50.9rem;
-      height: 48.8rem;
-      content: "";
-      background-image: url(../images/header/goit-girl-tablet.png);
-      background-size: cover;
-      background-repeat: no-repeat;
-      filter: drop-shadow(10px 60px 60px rgba(0, 0, 0, 0.12));
-      z-index: 3;
-    }
+
   }
 
   @include breakpoint($desktop-bp) {
@@ -47,12 +34,7 @@
       height: 100%;
     }
 
-    &::after {
-      right: 21.5rem;
-      width: 50.9rem;
-      height: 56.2rem;
-      background-image: url(../images/header/goit-girl-desktop.png);
-    }
+
   }
 
   &__nav {
@@ -91,10 +73,19 @@
     margin-top: 1rem;
     margin-left: 2rem;
     cursor: pointer;
+
+    @include breakpoint($tablet-bp) {
+      display: block;
+      margin: 0;
+    }
   }
 
   &__logo {
     display: inline-block;
+
+    @include breakpoint($tablet-bp) {
+      display: block;
+    }
   }
 
   &__text-block {
@@ -104,9 +95,61 @@
       position: relative;
       width: 45.2rem;
       margin-bottom: 0;
+      z-index: 2;
+
+      &::before{
+        display: block;
+        position: absolute;
+        content: "hire you";
+        bottom: -19.6rem;
+        left: 0;
+        width: 77.6rem;
+
+        font-family: $main-font;
+        font-weight: 800;
+        font-size: 130px;
+        line-height: 120px;
+        text-transform: uppercase;
+        color: #17ecff;
+
+        opacity: 0.06;
+      }
+
+      &::after {
+        position: absolute;
+        top: 1.4rem;
+        left: 20.9rem;
+        display: block;
+        width: 50.9rem;
+        height: 48.8rem;
+        content: "";
+        background-image: url(../images/header/goit-girl-tablet.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        filter: drop-shadow(10px 60px 60px rgba(0, 0, 0, 0.12));
+      }
     }
     @include breakpoint($desktop-bp) {
       width: 74.1rem;
+
+      &::before {
+        content: "we hire you";
+        top: 23.8rem;
+        width: 145.5rem;
+
+        font-size: 180px;
+        line-height: 216px;
+
+        opacity: 0.1;
+      }
+
+      &::after {
+        top: -7.6rem;
+        left: 66.1rem;
+        width: 50.9rem;
+        height: 56.2rem;
+        background-image: url(../images/header/goit-girl-desktop.png);
+      }
     }
   }
 
